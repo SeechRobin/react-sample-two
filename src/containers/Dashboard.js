@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Filter from "../components/Filter/Filter";
 import ProsList from "../components/ProList/ProList";
+import Pagination from "../components/Pagination/Pagination";
 
 import { PAGINATION } from "../constants/constants";
 
@@ -14,7 +15,10 @@ class Dashboard extends Component {
       categories: [],
       category_id: "",
       location: "",
-      prosList: []
+      prosList: [],
+      paginationCount: 0,
+      currentPage: 1,
+      isLoading: false
     };
     this.api = new api();
   }
@@ -27,6 +31,17 @@ class Dashboard extends Component {
       this.setState({ categories: activeCategories });
     });
   }
+
+  handlePageChange = e => {
+    const pageOffset =
+      e.target.attributes["offsetkey"].value * PAGINATION.x_pagination_limit;
+
+    const { category_id, location } = this.state;
+    this.fetchPros(category_id, location, pageOffset);
+    this.setState({
+      currentPage: Number(e.target.id)
+    });
+  };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -49,17 +64,43 @@ class Dashboard extends Component {
       .getlistOfPros(category_id, location.toLowerCase(), pageOffset)
       .then(response => {
         const pros = response.data.response.pros;
+        const pages = Math.ceil(
+          Number(response.headers["x-pagination-count"]) /
+            PAGINATION.x_pagination_limit
+        );
 
         this.setState({
           prosList: pros,
+          paginationCount: pages,
           isLoading: false
         });
         console.log(this.state.prosList);
       });
   }
 
+  handleNextPageClick = () => {
+    const { category_id, location, currentPage, paginationCount } = this.state;
+
+    if (currentPage < paginationCount) {
+      const newPage = currentPage + 1;
+      this.setState({ currentPage: newPage });
+      const pageOffset = (newPage - 1) * PAGINATION.x_pagination_limit;
+      this.fetchPros(category_id, location, pageOffset);
+    }
+  };
+  handlePrevPageClick = () => {
+    const { category_id, location, currentPage } = this.state;
+
+    if (currentPage > 1) {
+      const newPage = currentPage - 1;
+      this.setState({ currentPage: newPage });
+      const pageOffset = (newPage - 1) * PAGINATION.x_pagination_limit;
+      this.fetchPros(category_id, location, pageOffset);
+    }
+  };
+
   render() {
-    const { category_id, location, prosList } = this.state;
+    const { category_id, location, prosList, currentPage } = this.state;
     const values = { category_id, location };
     return (
       <div className="container">
@@ -70,6 +111,13 @@ class Dashboard extends Component {
           handleSubmit={this.handleSubmit}
         />
         <ProsList pros={prosList} />
+        <Pagination
+          handlePageChange={this.handlePageChange}
+          paginationCount={this.state.paginationCount}
+          currentPage={currentPage}
+          nextPage={this.handleNextPageClick}
+          prevPage={this.handlePrevPageClick}
+        />
       </div>
     );
   }

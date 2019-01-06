@@ -32,6 +32,13 @@ ShallowWrapper {
         <ProList
           pros={Array []}
         />,
+        <Pagination
+          currentPage={1}
+          handlePageChange={[Function]}
+          nextPage={[Function]}
+          paginationCount={0}
+          prevPage={[Function]}
+        />,
       ],
       "className": "container",
     },
@@ -65,6 +72,21 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "currentPage": 1,
+          "handlePageChange": [Function],
+          "nextPage": [Function],
+          "paginationCount": 0,
+          "prevPage": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -88,6 +110,13 @@ ShallowWrapper {
           />,
           <ProList
             pros={Array []}
+          />,
+          <Pagination
+            currentPage={1}
+            handlePageChange={[Function]}
+            nextPage={[Function]}
+            paginationCount={0}
+            prevPage={[Function]}
           />,
         ],
         "className": "container",
@@ -117,6 +146,21 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "pros": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "currentPage": 1,
+            "handlePageChange": [Function],
+            "nextPage": [Function],
+            "paginationCount": 0,
+            "prevPage": [Function],
           },
           "ref": null,
           "rendered": null,
