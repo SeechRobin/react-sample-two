@@ -86,7 +86,7 @@ ShallowWrapper {
           </span>
           <span />
           <span>
-            <UNDEFINED
+            <Rating
               rating={4}
             />
           </span>
@@ -100,7 +100,7 @@ ShallowWrapper {
           </span>
           <span />
           <span>
-            <UNDEFINED
+            <Rating
               rating={5}
             />
           </span>
@@ -166,7 +166,7 @@ ShallowWrapper {
               </span>
               <span />
               <span>
-                <UNDEFINED
+                <Rating
                   rating={4}
                 />
               </span>
@@ -180,7 +180,7 @@ ShallowWrapper {
               </span>
               <span />
               <span>
-                <UNDEFINED
+                <Rating
                   rating={5}
                 />
               </span>
@@ -397,7 +397,7 @@ ShallowWrapper {
               </span>,
               <span />,
               <span>
-                <UNDEFINED
+                <Rating
                   rating={4}
                 />
               </span>,
@@ -443,7 +443,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <UNDEFINED
+                "children": <Rating
                   rating={4}
                 />,
               },
@@ -451,13 +451,13 @@ ShallowWrapper {
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "rating": 4,
                 },
                 "ref": null,
                 "rendered": null,
-                "type": Object {},
+                "type": [Function],
               },
               "type": "span",
             },
@@ -478,7 +478,7 @@ ShallowWrapper {
               </span>,
               <span />,
               <span>
-                <UNDEFINED
+                <Rating
                   rating={5}
                 />
               </span>,
@@ -524,7 +524,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <UNDEFINED
+                "children": <Rating
                   rating={5}
                 />,
               },
@@ -532,13 +532,13 @@ ShallowWrapper {
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "rating": 5,
                 },
                 "ref": null,
                 "rendered": null,
-                "type": Object {},
+                "type": [Function],
               },
               "type": "span",
             },
@@ -608,7 +608,7 @@ ShallowWrapper {
             </span>
             <span />
             <span>
-              <UNDEFINED
+              <Rating
                 rating={4}
               />
             </span>
@@ -622,7 +622,7 @@ ShallowWrapper {
             </span>
             <span />
             <span>
-              <UNDEFINED
+              <Rating
                 rating={5}
               />
             </span>
@@ -688,7 +688,7 @@ ShallowWrapper {
                 </span>
                 <span />
                 <span>
-                  <UNDEFINED
+                  <Rating
                     rating={4}
                   />
                 </span>
@@ -702,7 +702,7 @@ ShallowWrapper {
                 </span>
                 <span />
                 <span>
-                  <UNDEFINED
+                  <Rating
                     rating={5}
                   />
                 </span>
@@ -919,7 +919,7 @@ ShallowWrapper {
                 </span>,
                 <span />,
                 <span>
-                  <UNDEFINED
+                  <Rating
                     rating={4}
                   />
                 </span>,
@@ -965,7 +965,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <UNDEFINED
+                  "children": <Rating
                     rating={4}
                   />,
                 },
@@ -973,13 +973,13 @@ ShallowWrapper {
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "rating": 4,
                   },
                   "ref": null,
                   "rendered": null,
-                  "type": Object {},
+                  "type": [Function],
                 },
                 "type": "span",
               },
@@ -1000,7 +1000,7 @@ ShallowWrapper {
                 </span>,
                 <span />,
                 <span>
-                  <UNDEFINED
+                  <Rating
                     rating={5}
                   />
                 </span>,
@@ -1046,7 +1046,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <UNDEFINED
+                  "children": <Rating
                     rating={5}
                   />,
                 },
@@ -1054,13 +1054,13 @@ ShallowWrapper {
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "rating": 5,
                   },
                   "ref": null,
                   "rendered": null,
-                  "type": Object {},
+                  "type": [Function],
                 },
                 "type": "span",
               },

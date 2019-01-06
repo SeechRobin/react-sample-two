@@ -17,46 +17,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <filter
-        categories={Array []}
-        handleChange={[Function]}
-        handleSubmit={[Function]}
-        values={
-          Object {
-            "category_id": "",
-            "location": "",
-          }
-        }
-      />,
-      "className": "container",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "categories": Array [],
-        "handleChange": [Function],
-        "handleSubmit": [Function],
-        "values": Object {
-          "category_id": "",
-          "location": "",
-        },
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <filter
+      "children": Array [
+        <filter
           categories={Array []}
           handleChange={[Function]}
           handleSubmit={[Function]}
@@ -67,10 +29,15 @@ ShallowWrapper {
             }
           }
         />,
-        "className": "container",
-      },
-      "ref": null,
-      "rendered": Object {
+        <ProList
+          pros={Array []}
+        />,
+      ],
+      "className": "container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
@@ -87,6 +54,75 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "pros": Array [],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <filter
+            categories={Array []}
+            handleChange={[Function]}
+            handleSubmit={[Function]}
+            values={
+              Object {
+                "category_id": "",
+                "location": "",
+              }
+            }
+          />,
+          <ProList
+            pros={Array []}
+          />,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "categories": Array [],
+            "handleChange": [Function],
+            "handleSubmit": [Function],
+            "values": Object {
+              "category_id": "",
+              "location": "",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "pros": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
