@@ -181,3 +181,12 @@ form {
   text-align: center;
   padding: 10px 10px;
 }
+
+/****************** Ratings ********************/
+.checked {
+  color: orange;
+}
+
+.unchecked {
+  color: #838181;
+}
