@@ -25,3 +25,4 @@ $ yarn test
 ## Improvements
 
 - Split the CSS file into modular CSS with CSS Module, or use Less/Sass
+- Cache categories

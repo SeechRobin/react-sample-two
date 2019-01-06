@@ -32,17 +32,6 @@ class Dashboard extends Component {
     });
   }
 
-  handlePageChange = e => {
-    const pageOffset =
-      e.target.attributes["offsetkey"].value * PAGINATION.x_pagination_limit;
-
-    const { category_id, location } = this.state;
-    this.fetchPros(category_id, location, pageOffset);
-    this.setState({
-      currentPage: Number(e.target.id)
-    });
-  };
-
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -77,6 +66,17 @@ class Dashboard extends Component {
         console.log(this.state.prosList);
       });
   }
+
+  handlePageChange = e => {
+    const pageOffset =
+      e.target.attributes["offsetkey"].value * PAGINATION.x_pagination_limit;
+
+    const { category_id, location } = this.state;
+    this.fetchPros(category_id, location, pageOffset);
+    this.setState({
+      currentPage: Number(e.target.id)
+    });
+  };
 
   handleNextPageClick = () => {
     const { category_id, location, currentPage, paginationCount } = this.state;
