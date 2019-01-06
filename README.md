@@ -25,4 +25,6 @@ $ yarn test
 ## Improvements
 
 - Split the CSS file into modular CSS with CSS Module, or use Less/Sass
+- Improve the UX.
 - Cache categories
+- Add more tests
