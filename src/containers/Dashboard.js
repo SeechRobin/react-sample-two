@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Filter from "../components/Filter/Filter";
+import ProsList from "../components/ProList/ProList";
 
 import { PAGINATION } from "../constants/constants";
 
@@ -12,7 +13,8 @@ class Dashboard extends Component {
     this.state = {
       categories: [],
       category_id: "",
-      location: ""
+      location: "",
+      prosList: []
     };
     this.api = new api();
   }
@@ -35,11 +37,29 @@ class Dashboard extends Component {
     this.setState({ currentPage: 1 });
     const { category_id, location } = this.state;
     if (location && category_id) {
+      this.fetchPros(category_id, location, PAGINATION.x_pagination_offset);
     }
   };
 
+  fetchPros(category_id, location, pageOffset) {
+    this.setState({
+      isLoading: true
+    });
+    this.api
+      .getlistOfPros(category_id, location.toLowerCase(), pageOffset)
+      .then(response => {
+        const pros = response.data.response.pros;
+
+        this.setState({
+          prosList: pros,
+          isLoading: false
+        });
+        console.log(this.state.prosList);
+      });
+  }
+
   render() {
-    const { category_id, location } = this.state;
+    const { category_id, location, prosList } = this.state;
     const values = { category_id, location };
     return (
       <div className="container">
@@ -49,6 +69,7 @@ class Dashboard extends Component {
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
         />
+        <ProsList pros={prosList} />
       </div>
     );
   }
