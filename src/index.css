@@ -152,3 +152,32 @@ form {
   border-radius: 0;
   font-weight: bold;
 }
+
+/****************** Pros List ********************/
+.pros-list {
+  background-color: bisque;
+}
+
+.pros-list-table {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 2fr;
+  border: 1px solid black;
+}
+.pros-list-table > span {
+  padding: 15px 15px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.pro-list-table-header {
+  background: #14c59c;
+}
+
+.pros-list-table-noresult {
+  display: block;
+  background: #14c59c;
+  color: #070707;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 10px;
+}
