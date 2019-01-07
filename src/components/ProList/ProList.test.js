@@ -21,7 +21,7 @@ describe("<ProList />", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("clicking submit button", () => {
+  it("should render placeholder text", () => {
     wrapper.setProps({ pros: [] });
     expect(wrapper.contains("No results Search for Pros in your area")).toEqual(
       true
