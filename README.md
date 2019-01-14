@@ -1,12 +1,10 @@
-# Plentific
 
-Plentific Challenge
 
 ### Installing
 
 ```sh
-$ git clone https://gitlab.com/seechrobin/plentific-coding-challenge
-$ cd plentific-coding-challenge
+$ git clone https://github.com/SeechRobin/react-sample-two
+$ cd react-sample-two
 $ yarn install
 ```
 
