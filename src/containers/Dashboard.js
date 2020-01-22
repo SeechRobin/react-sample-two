@@ -32,7 +32,7 @@ class Dashboard extends Component {
     });
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     console.log(nextProps);
   }
 
