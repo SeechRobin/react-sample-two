@@ -32,6 +32,10 @@ class Dashboard extends Component {
     });
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+  }
+
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
